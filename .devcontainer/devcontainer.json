@@ -1,0 +1,23 @@
+{
+  "name": "Python 3.7 Test",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Use the Python interpreter inside the container
+        "python.defaultInterpreterPath": "/usr/local/bin/python3"
+      },
+      "extensions": [
+        // Python language support
+        "ms-python.python",
+        // Type checking and IntelliSense
+        "ms-python.vscode-pylance",
+        // Jupyter Notebook support
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  // Use non-root user inside container for better compatibility with VS Code
+  "remoteUser": "vscode"
+}
